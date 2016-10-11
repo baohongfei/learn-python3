@@ -15,3 +15,4 @@ classmates.pop()
 print(classmates)
 
 # tuple
+classmates = ("Michael", 'Bob', "Tracy")
