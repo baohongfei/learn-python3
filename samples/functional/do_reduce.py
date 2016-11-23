@@ -3,6 +3,16 @@
 
 from functools import reduce
 
+def add(x,y):
+    return x+y
+
+print(reduce(add,[1,3,5,7,9]))
+
+def fn(x,y):
+    return x*10+y
+
+print(reduce(fn,[1,3,5,7,9]))
+
 CHAR_TO_INT = {
     '0': 0,
     '1': 1,
@@ -15,3 +25,13 @@ CHAR_TO_INT = {
     '8': 8,
     '9': 9
 }
+
+def char2num(s):
+    return CHAR_TO_INT[s]
+
+print(reduce(fn,map(char2num,'13579')))
+
+def str2int(s):
+    return reduce(lambda x,y:x*10+y,map(char2num,s))
+
+print("my first lambda",str2int("13579")+1)
